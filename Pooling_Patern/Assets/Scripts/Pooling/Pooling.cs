@@ -39,7 +39,7 @@ public class Pooling
     {
         if (pool.Count == 0)
         {
-            Debug.LogError("Dizi dolu olduğundan istediğiniz objeyi çağıramıyoruz.Ya objelerden birini siliniz yada başlangıçta havuz için obje sayısını arttırın");
+            Debug.LogWarning("Dizi dolu olduğundan istediğiniz objeyi çağıramıyoruz.Ya objelerden birini siliniz yada başlangıçta havuz için obje sayısını arttırın");
             return null;
         }
         GameObject call = pool.Dequeue();

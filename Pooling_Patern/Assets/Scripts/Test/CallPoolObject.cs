@@ -7,12 +7,16 @@ using UnityEngine;
 /// </summary>
 public class CallPoolObject : PoolMaster
 {
-    float counter = 0;
+    public float randomMinX = 0;
+    public float randomMinZ = 0;
+    public float randomMaxX = 0;
+    public float randomMaxZ= 0;
 
     void Create(PoolNames poolNames)
     {
-        counter +=.8f;
-        poolManager.PullFromPool(poolNames, Vector3.left * counter);
+       
+        poolManager.PullFromPool(poolNames, new 
+            Vector3(Random.Range(randomMinX,randomMaxX),0,Random.Range(randomMinZ,randomMaxZ)));
 
     }
     void RandomDestroy(PoolNames poolNames)
