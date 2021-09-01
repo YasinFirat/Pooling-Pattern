@@ -1,9 +1,10 @@
+using UnityEngine;
 /// <summary>
 /// Every pool member has this script.
 /// When the member wants to go to the pool again, member applies to this class.
 /// 
 /// </summary>
-public class PoolMember: PoolMaster
+public class PoolMember: MonoBehaviour
 {
     public Pooling pooling;
     public PoolNames POOLNAMES;
@@ -14,7 +15,7 @@ public class PoolMember: PoolMaster
     /// </summary>
     void GoBackToPool()
     {
-         poolManager.BackToPool(POOLNAMES, this.gameObject);
+         PoolManager.Instance.BackToPool(POOLNAMES, this.gameObject);
         
     }
     private void OnDisable()

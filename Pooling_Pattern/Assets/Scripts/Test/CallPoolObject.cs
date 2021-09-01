@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// This script example for Pooling
 /// </summary>
-public class CallPoolObject : PoolMaster
+public class CallPoolObject : MonoBehaviour
 {
     public float randomMinX = 0;
     public float randomMinZ = 0;
@@ -15,7 +15,7 @@ public class CallPoolObject : PoolMaster
     void Create(PoolNames poolNames)
     {
        
-        poolManager.PullFromPool(poolNames, new 
+        PoolManager.Instance.PullFromPool(poolNames, new 
             Vector3(Random.Range(randomMinX,randomMaxX),0,Random.Range(randomMinZ,randomMaxZ)));
 
     }

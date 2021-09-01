@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
@@ -7,13 +7,30 @@ using UnityEngine;
 public class PoolManager : MonoBehaviour
 {
     public Pooling[] poolings;
+    /// <summary>
+    /// Returns true after all pool objects have been loaded.
+    /// </summary>
+    public bool isDone { get; private set; }
+
+    #region Singleton
+    public static PoolManager Instance { get; private set; }
     private void Awake()
     {
+        if (Instance != null)
+        {
+            Destroy(this);
+            return;
+        }
+        Instance = this;
+
         for (int i = 0; i < poolings.Length; i++)
         {
             poolings[i].FillPool();
         }
+        isDone = true;
     }
+    #endregion
+
 
     /// <summary>
     /// The object goes back to the pool where it was extracted.
