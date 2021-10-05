@@ -11,7 +11,8 @@ public class CallPoolObject : MonoBehaviour
     public float randomMinZ = 0;
     public float randomMaxX = 0;
     public float randomMaxZ= 0;
-
+    public float counter = 0;
+   
     void Create(PoolNames poolNames)
     {
        
@@ -27,7 +28,7 @@ public class CallPoolObject : MonoBehaviour
             return;
         foreach (PoolMember item in member)
         {
-            if (item.POOLNAMES == poolNames)
+            if (item.poolNames == poolNames)
             {
                 item.gameObject.SetActive(false);
                 return;

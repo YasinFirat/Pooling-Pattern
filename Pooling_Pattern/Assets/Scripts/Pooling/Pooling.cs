@@ -14,20 +14,24 @@ public class Pooling
     public GameObject prefab;
     public Transform parent;
     public int totalMember;
-    Queue<GameObject> pool = new Queue<GameObject>();
-
+    private GameObject[] pool;
+    private GameObject newObject;
+   
     /// <summary>
     /// Objects are filled into the Pool and the PoolMember script is added to become a member of the Pool.
-    /// </summary>    
+    /// </summary> 
     public void FillPool()
     {
+        pool = new GameObject[totalMember];
         for (int i = 0; i < totalMember; i++)
         {
-            GameObject newObject = Object.Instantiate(prefab, parent);
+            newObject = Object.Instantiate(prefab, parent);
             newObject.SetActive(false);
-            newObject.AddComponent<PoolMember>().POOLNAMES = POOLNAMES;
-            pool.Enqueue(newObject);
+            newObject.AddComponent<PoolMember>().SetPoolNames(POOLNAMES);
+            pool[i] = newObject;
         }
+
+      
     }
 
     /// <summary>
@@ -37,15 +41,16 @@ public class Pooling
     /// <returns></returns>
     public GameObject PullFromPool(Vector3 _position)
     {
-        if (pool.Count == 0)
+        for (int i = 0; i < totalMember; i++)
         {
-            Debug.LogWarning("Dizi dolu olduğundan istediğiniz objeyi çağıramıyoruz.Ya objelerden birini siliniz yada başlangıçta havuz için obje sayısını arttırın");
-            return null;
+            newObject = pool[i];
+            if (!newObject.activeInHierarchy)
+            {
+                newObject.SetActive(true);
+                return newObject;
+            }
         }
-        GameObject call = pool.Dequeue();
-        call.transform.position = _position;
-        call.SetActive(true);
-        return call;
+        return null;
     }
     /// <summary>
     ///The object is sent back to the pool.
@@ -53,7 +58,10 @@ public class Pooling
     /// <param name="gameObject"></param>
     public void AddPool(GameObject gameObject)
     {
+        if (gameObject.transform.parent != parent)
+        {
+            gameObject.transform.SetParent(parent);
+        }
         gameObject.SetActive(false);
-        pool.Enqueue(gameObject);
     }
 }

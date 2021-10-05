@@ -7,15 +7,21 @@ using UnityEngine;
 public class PoolMember: MonoBehaviour
 {
     public Pooling pooling;
-    public PoolNames POOLNAMES;
-
+    public PoolNames poolNames;
+   
+    public PoolMember SetPoolNames(PoolNames _poolNames)
+    {
+        poolNames = _poolNames;
+        return this;
+    }
+   
     /// <summary>
     /// If you do not know which pool the object belongs to, 
     /// you can send the object to its repository with this method.
     /// </summary>
     void GoBackToPool()
     {
-         PoolManager.Instance.BackToPool(POOLNAMES, this.gameObject);
+         PoolManager.Instance.BackToPool(poolNames, this.gameObject);
         
     }
     private void OnDisable()

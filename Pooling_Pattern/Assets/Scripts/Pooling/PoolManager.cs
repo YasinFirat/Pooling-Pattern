@@ -65,7 +65,6 @@ public class PoolManager : MonoBehaviour
             if (poolings[i].POOLNAMES == POOLNAMES)
             {
                 return poolings[(int)POOLNAMES].PullFromPool(_position);
-                
             }
         }
         return null;
