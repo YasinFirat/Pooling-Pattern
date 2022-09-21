@@ -337,12 +337,13 @@
 "Assets/Scripts/Pooling/Abstruct/IPoolable.cs"
 "Assets/Scripts/Pooling/Abstruct/IPoolableWithNames.cs"
 "Assets/Scripts/Pooling/Abstruct/PoolOperations.cs"
+"Assets/Scripts/Pooling/Enums/PoolNames.cs"
 "Assets/Scripts/Pooling/PoolFeatures.cs"
 "Assets/Scripts/Pooling/Pooling.cs"
 "Assets/Scripts/Pooling/PoolManager.cs"
 "Assets/Scripts/Pooling/PoolMember.cs"
-"Assets/Scripts/Pooling/PoolNames.cs"
 "Assets/Scripts/Pooling/PoolObject.cs"
+"Assets/Scripts/PoolNamesEditor.cs"
 "Assets/Scripts/Test/CallPoolObject.cs"
 -langversion:9.0
 
