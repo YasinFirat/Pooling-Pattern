@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="INTERFACES">
+    <Position X="1.281" Y="0.5" Height="0.291" Width="0.929" />
+  </Comment>
+  <Class Name="PoolOperations" Collapsed="true">
+    <Position X="2.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAAAAAABAAAAAAAAAAAAAAAACAACAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\Pooling\Abstruct\PoolOperations.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PoolManager" Collapsed="true">
+    <Position X="4.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Pooling\PoolManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PoolFeatures" Collapsed="true">
+    <Position X="7.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAIAAIAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Pooling\PoolFeatures.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pooling" Collapsed="true">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAAQAAACAAAEAAAAAAAAAACAAAAAAAAgAAAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\Pooling\Pooling.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.673" />
+  </Class>
+  <Class Name="PoolObject" Collapsed="true">
+    <Position X="9.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAABAAAAAAAggAggAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Pooling\PoolObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PoolMember" Collapsed="true">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\Pooling\PoolMember.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IPoolable" Collapsed="true">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Pooling\Abstruct\IPoolable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IPoolableWithNames" Collapsed="true">
+    <Position X="2.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Pooling\Abstruct\IPoolableWithNames.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="PoolNames">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\Pooling\PoolNames.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

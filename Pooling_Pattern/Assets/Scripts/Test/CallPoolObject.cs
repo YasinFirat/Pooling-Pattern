@@ -26,14 +26,13 @@ public class CallPoolObject : MonoBehaviour
         PoolMember[] member = FindObjectsOfType<PoolMember>();
         if (member == null)
             return;
-        foreach (PoolMember item in member)
+        foreach (PoolMember item in member) //foreach is bad pls dont use your projects :)
         {
             if (item.poolNames == poolNames)
             {
                 item.gameObject.SetActive(false);
                 return;
             }
-          
         }
     }
     public void CreateBlue()
